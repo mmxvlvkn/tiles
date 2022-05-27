@@ -54,7 +54,7 @@ content.addEventListener('click', function(event) {
                     coordinates.x = clickId % 10;
                     coordinates.y = Math.floor(clickId / 10);
                     rightTile = getRightTile(coordinates);
-                    console.log(rightTile);
+                    //!console.log(rightTile);
                 }
             } else {
                 if (event.target.classList.contains('play__item')) {
@@ -109,7 +109,7 @@ function start() {
 
     // получаем следующую верную клетку
     rightTile = getRightTile(coordinates);
-    console.log(rightTile);
+    //!console.log(rightTile);
 
 }
 
