@@ -41,6 +41,11 @@ body._lock {
         box-shadow: 1px 1px 1px 1px black;
         cursor: pointer;
     }
+    &__item::after {
+        content: '';
+        display: block;
+        margin-bottom: 100%;
+    }
     &__item:nth-child(n + 91) {
         background-color: #d1edf2;
     }
