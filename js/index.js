@@ -120,15 +120,41 @@ function random(num1, num2) {
 
 // функция получения следующего правильного выбора
 function getRightTile(coordinates) {
-    //TODO прописать логику боков
-    // получение рандомного числа из нужного диапазона в зависимости от позиции: 1-2/1-3
     let randomMax = 3;
+    let randomNum = random(1, randomMax);
+    //TODO прописать логику боков
+    // получение рандомного числа из нужного диапазона в зависимости от позиции: 1-2/1-3/1-1
+    if (coordinates.x === 0) {
+        if (tiles[coordinates.y][coordinates.x + 1].isActivated) {
+            return tiles[coordinates.y - 1][coordinates.x]
+        } else {
+            randomNum = random(1, 2);
+
+            if (randomNum === 1) {
+                return tiles[coordinates.y - 1][coordinates.x];
+            } else {
+                return tiles[coordinates.y][coordinates.x + 1];
+            }
+        }
+    } else if (coordinates.x === 9) {
+        if (tiles[coordinates.y][coordinates.x - 1].isActivated) {
+            return tiles[coordinates.y - 1][coordinates.x]
+        } else {
+            randomNum = random(1, 2);
+
+            if (randomNum === 1) {
+                return tiles[coordinates.y - 1][coordinates.x];
+            } else {
+                return tiles[coordinates.y][coordinates.x - 1];
+            }
+        }
+    }
+
     if (tiles[coordinates.y][coordinates.x - 1].isActivated) {
         randomMax = 2;
     } else if (tiles[coordinates.y][coordinates.x + 1].isActivated) {
         randomMax = 2;
     }
-    let randomNum = random(1, randomMax);
 
     // получение нужной клетки
     if (randomNum === 1) {
