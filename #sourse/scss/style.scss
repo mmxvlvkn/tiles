@@ -1,0 +1,157 @@
+@import "nullstyle.scss";
+
+body._lock {
+    overflow: hidden;
+}
+
+.play {
+    &__wrapper {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #87cefa;
+    }
+    &__container {
+        position: relative;
+        flex: 1 1 100%;
+        max-width: 650px;
+    }
+    &__container:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+        gap: 1%;
+        width: 100%;
+        height: 100%;
+
+    }
+    &__item {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px black;
+        cursor: pointer;
+    }
+    &__item:nth-child(n + 91) {
+        background-color: #d1edf2;
+    }
+    &__item:nth-child(-n + 10) {
+        background-color: #afeeee;
+    }
+    &__item:hover {
+        background-color: #ddd;
+    }
+    &__item:active {
+        background-color: #ceffce;
+    }
+}
+
+.the-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 300ms;
+
+    &__body {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        width: 300px;
+        height: 400px;
+        background-color: #fff;
+    }
+    &__title {
+        font-family: Roboto;
+        font-size: 30px;
+        text-align: center;
+    }
+    &__image {
+        width: 200px;
+        height: 200px;
+    }
+    &__image img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.win {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 800ms;
+
+    &__body {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        width: 300px;
+        height: 400px;
+        background-color: #fff;
+    }
+    &__title {
+        font-family: Roboto;
+        letter-spacing: 3px;
+        font-size: 45px;
+        text-align: center;
+    }
+    &__image {
+        width: 200px;
+        height: 200px;
+    }
+    &__image img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.the-end._active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.win._active {
+    visibility: visible;
+    opacity: 1;
+}
+
+._activated {
+    background-color: #ceffce !important;
+    cursor: default !important;
+}
+
+._the-end {
+    background-color: red !important;
+}
