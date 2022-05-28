@@ -97,7 +97,7 @@ function start() {
     }
 
     // переменная для рандомных чисел
-    let randomNum = random(0, 9);
+    let randomNum = random(2, 7);
 
     // рандомно выбирает первую клетку
     tiles[9][randomNum].value.classList.add('_activated');
