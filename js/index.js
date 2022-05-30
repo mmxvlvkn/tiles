@@ -2,7 +2,7 @@
 const body = document.querySelector('body');
 const content = document.querySelector('.play__content');
 const theEnd = document.querySelector('.the-end');
-const win = document.querySelector('.the-end');
+const win = document.querySelector('.win');
 const theEndButton = document.querySelector('.the-end__image');
 const winButton = document.querySelector('.win__image');
 
@@ -54,7 +54,7 @@ content.addEventListener('click', function(event) {
                     coordinates.x = clickId % 10;
                     coordinates.y = Math.floor(clickId / 10);
                     rightTile = getRightTile(coordinates);
-                    //!console.log(rightTile);
+                    !console.log(rightTile);
                 }
             } else {
                 if (event.target.classList.contains('play__item')) {
@@ -97,7 +97,7 @@ function start() {
     }
 
     // переменная для рандомных чисел
-    let randomNum = random(0, 9);
+    let randomNum = random(2, 7);
 
     // рандомно выбирает первую клетку
     tiles[9][randomNum].value.classList.add('_activated');
@@ -109,7 +109,7 @@ function start() {
 
     // получаем следующую верную клетку
     rightTile = getRightTile(coordinates);
-    //!console.log(rightTile);
+    !console.log(rightTile);
 
 }
 
