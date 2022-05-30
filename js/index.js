@@ -54,7 +54,7 @@ content.addEventListener('click', function(event) {
                     coordinates.x = clickId % 10;
                     coordinates.y = Math.floor(clickId / 10);
                     rightTile = getRightTile(coordinates);
-                    !console.log(rightTile);
+                    //!console.log(rightTile);
                 }
             } else {
                 if (event.target.classList.contains('play__item')) {
@@ -109,7 +109,7 @@ function start() {
 
     // получаем следующую верную клетку
     rightTile = getRightTile(coordinates);
-    !console.log(rightTile);
+    //!console.log(rightTile);
 
 }
 
@@ -122,7 +122,6 @@ function random(num1, num2) {
 function getRightTile(coordinates) {
     let randomMax = 3;
     let randomNum = random(1, randomMax);
-    //TODO прописать логику боков
     // получение рандомного числа из нужного диапазона в зависимости от позиции: 1-2/1-3/1-1
     if (coordinates.x === 0) {
         if (tiles[coordinates.y][coordinates.x + 1].isActivated) {
