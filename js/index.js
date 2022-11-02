@@ -54,7 +54,7 @@ content.addEventListener('click', function(event) {
                     coordinates.x = clickId % 10;
                     coordinates.y = Math.floor(clickId / 10);
                     rightTile = getRightTile(coordinates);
-                    rightTile.style.border = "1px solid red";
+                    rightTile.value.style.border = "1px solid red";
                     //!console.log(rightTile);
                 }
             } else {
@@ -111,7 +111,7 @@ function start() {
     // получаем следующую верную клетку
     rightTile = getRightTile(coordinates);
     //!console.log(rightTile);
-    rightTile.style.border = "1px solid red"
+    rightTile.value.style.border = "1px solid red";
 
 }
 
