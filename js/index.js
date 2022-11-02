@@ -111,14 +111,13 @@ function start() {
     // получаем следующую верную клетку
     rightTile = getRightTile(coordinates);
     //!console.log(rightTile);
+    rightTile.style.border = "1px solid red"
 
 }
 
 // функция целочисленно рандома рандома от num1 до num2 включительно
 function random(num1, num2) {
-    let var = Math.floor(Math.random() * (num2 - num1 + 1) + num1);
-    console.log(var);
-    return var;
+    return Math.floor(Math.random() * (num2 - num1 + 1) + num1);
 }
 
 // функция получения следующего правильного выбора
