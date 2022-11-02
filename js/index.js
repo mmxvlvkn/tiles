@@ -54,6 +54,7 @@ content.addEventListener('click', function(event) {
                     coordinates.x = clickId % 10;
                     coordinates.y = Math.floor(clickId / 10);
                     rightTile = getRightTile(coordinates);
+                    rightTile.style.border = "1px solid red";
                     //!console.log(rightTile);
                 }
             } else {
