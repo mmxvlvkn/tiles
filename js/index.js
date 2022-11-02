@@ -116,6 +116,7 @@ function start() {
 // функция целочисленно рандома рандома от num1 до num2 включительно
 function random(num1, num2) {
     let var = Math.floor(Math.random() * (num2 - num1 + 1) + num1);
+    console.log(var);
     return var;
 }
 
